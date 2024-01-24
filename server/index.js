@@ -19,7 +19,7 @@ mongoose
   });
 
 app.use(cors({
-    origin:"*",
+    origin:[process.env.BASE_URL],
     methods:['POST','GET'],
     credentials:true
 }))
