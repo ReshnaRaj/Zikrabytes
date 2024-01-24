@@ -17,7 +17,7 @@ const Addlanding = () => {
       formData.append("title", title);
       formData.append("description", desc);
       formData.append("img", img);
-      const response = await axios.post(`${baseUrl}/addlanding`,
+      const response = await axios.post(`${baseUrl}addlanding`,
         formData,
         {
           headers: {
