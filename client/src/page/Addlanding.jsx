@@ -2,10 +2,12 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 
+
 const Addlanding = () => {
   const [title, setTitle] = useState("");
   const [desc, setDesc] = useState("");
   const [img, setImg] = useState("");
+  const baseUrl = import.meta.env.VITE_REACT_APP_BASE_URL;
   const navigate = useNavigate();
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -15,8 +17,7 @@ const Addlanding = () => {
       formData.append("title", title);
       formData.append("description", desc);
       formData.append("img", img);
-      const response = await axios.post(
-        "http://localhost:4001/addlanding",
+      const response = await axios.post(`${baseUrl}/addlanding`,
         formData,
         {
           headers: {

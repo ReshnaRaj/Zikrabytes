@@ -3,13 +3,14 @@ import axios from 'axios'
 
 const Landingpage = () => {
   const [data, setData] = useState([]);
+  const baseUrl = import.meta.env.VITE_REACT_APP_BASE_URL;
   useEffect(() => {
      getData();
   }, []);
   
   const getData = async () => {
     try {
-      const response = await axios.get('http://localhost:4001/getdata');
+      const response = await axios.get(`${baseUrl}/getdata`);
       const responseData = response.data;
 
       if (responseData.success) {
@@ -41,7 +42,7 @@ const Landingpage = () => {
           <div className="bg-white p-6 shadow-md">
             <div className="mb-4">
               <img
-                src={`http://localhost:4001${item.img}`} 
+                src={`${baseUrl}${item.img}`} 
                 className="w-full h-24 object-cover mb-2 rounded-lg"
                 alt={`Box ${index + 1}`}
               />
