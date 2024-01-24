@@ -1,6 +1,6 @@
 import {BrowserRouter,Routes,Route} from 'react-router-dom'
 import Homepage from './page/Homepage'
-import Landingpage from './page/landingpage'
+import Landingpage from './page/Landingpage'
 import Addlanding from './page/Addlanding'
  
 
