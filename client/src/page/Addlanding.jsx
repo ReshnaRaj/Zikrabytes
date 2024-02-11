@@ -8,6 +8,7 @@ const Addlanding = () => {
   const [desc, setDesc] = useState("");
   const [img, setImg] = useState("");
   const baseUrl = import.meta.env.VITE_REACT_APP_BASE_URL;
+  console.log(baseUrl,"base url...")
   const navigate = useNavigate();
   const handleSubmit = async (e) => {
     e.preventDefault();

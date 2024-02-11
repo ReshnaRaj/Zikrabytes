@@ -31,7 +31,7 @@ module.exports.getData = async (req, res) => {
     try {
     //   console.log("data getting");
       const data = await page.find({});
-    //   console.log(data);
+      console.log(data,"get data");
       res.status(200).json({ data, success: true });
     } catch (error) {
       console.log(error);
